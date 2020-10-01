@@ -11,7 +11,9 @@ const App = () => {
 		<Fragment>
 			<Header />
 			<Container>
-				<HomeScreen />
+				<main>
+					<HomeScreen />
+				</main>
 			</Container>
 			<Footer />
 		</Fragment>
