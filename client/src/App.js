@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import Header from './components/Header';
@@ -8,15 +8,15 @@ import HomeScreen from './screens/HomeScreen';
 
 const App = () => {
 	return (
-		<Fragment>
+		<Router>
 			<Header />
 			<Container>
 				<main>
-					<HomeScreen />
+					<Route exact path="/" component={HomeScreen} />
 				</main>
 			</Container>
 			<Footer />
-		</Fragment>
+		</Router>
 	);
 };
 
