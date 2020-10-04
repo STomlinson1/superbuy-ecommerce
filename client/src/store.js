@@ -2,7 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'; // allows async request
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const reducer = combineReducers({}); // combine multiple reducers for the application
+import { productListReducer } from './reducers/productReducers';
+
+// combine multiple reducers for the application
+// productList is the state that appears in the application
+const reducer = combineReducers({ productList: productListReducer });
 
 const initialState = {}; // the initial state of the application
 
